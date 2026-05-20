@@ -5,7 +5,10 @@ if (bookingForm && formNote) {
   bookingForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    const formData = new FormData(bookingForm);
+    const name = formData.get("name") || "Готово";
+
     bookingForm.classList.add("is-sent");
-    formNote.textContent = "Готово: в реальном проекте после этого заявка ушла бы администратору.";
+    formNote.textContent = `${name}, заявка подготовлена. Администратор свяжется с вами для подтверждения.`;
   });
 }
