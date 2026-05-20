@@ -25,6 +25,7 @@
       <nav class="main-nav" aria-label="Основная навигация">
         <a href="#services">Услуги</a>
         <a href="#masters">Мастера</a>
+        <a href="#reviews">Отзывы</a>
         <a href="#booking">Запись</a>
       </nav>
       <a class="header-action" href="tel:+79990000000">+7 999 000-00-00</a>
@@ -112,6 +113,36 @@
         </div>
       </section>
 
+      <section class="section reviews-section" id="reviews">
+        <div class="section-heading">
+          <p class="eyebrow">Отзывы</p>
+          <h2>Гости возвращаются не только за стрижкой</h2>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <p>
+              "Объяснил, как укладывать волосы дома, и сделал форму, которая держится уже
+              третью неделю."
+            </p>
+            <strong>Даниил, стрижка</strong>
+          </article>
+          <article class="review-card">
+            <p>
+              "Записался на комплекс перед собеседованием. Получилось спокойно, быстро и очень
+              аккуратно."
+            </p>
+            <strong>Илья, комплекс</strong>
+          </article>
+          <article class="review-card">
+            <p>
+              "Бороду оформили ровно, без раздражения. Понравилось, что мастер сначала уточнил
+              все детали."
+            </p>
+            <strong>Марат, борода</strong>
+          </article>
+        </div>
+      </section>
+
       <section class="booking-section" id="booking">
         <div class="booking-copy">
           <p class="eyebrow">Запись</p>
@@ -121,24 +152,27 @@
             оформлена как демонстрационная.
           </p>
         </div>
-        <form class="booking-form">
+        <form class="booking-form" id="booking-form">
           <label>
             Имя
-            <input type="text" name="name" placeholder="Алексей" />
+            <input type="text" name="name" placeholder="Алексей" required />
           </label>
           <label>
             Телефон
-            <input type="tel" name="phone" placeholder="+7 999 000-00-00" />
+            <input type="tel" name="phone" placeholder="+7 999 000-00-00" required />
           </label>
           <label>
             Услуга
-            <select name="service">
+            <select name="service" required>
               <option>Мужская стрижка</option>
               <option>Борода и бритье</option>
               <option>Комплекс</option>
             </select>
           </label>
-          <button class="button button-primary" type="button">Отправить заявку</button>
+          <button class="button button-primary" type="submit">Отправить заявку</button>
+          <p class="form-note" id="form-note" role="status">
+            Демо-форма: заявка не отправляется на сервер, но показывает сценарий записи.
+          </p>
         </form>
       </section>
     </main>
@@ -148,5 +182,6 @@
       <span>Ежедневно 10:00-22:00</span>
       <span>Москва, ул. Примерная, 12</span>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
