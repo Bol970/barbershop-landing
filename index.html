@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blade & Co | Барбершоп в центре города</title>
+    <meta
+      name="description"
+      content="Лендинг современного барбершопа Blade & Co: стрижки, оформление бороды, уход и запись онлайн."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Blade and Co">
+        <span class="brand-mark">B</span>
+        <span>Blade &amp; Co</span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#masters">Мастера</a>
+        <a href="#booking">Запись</a>
+      </nav>
+      <a class="header-action" href="tel:+79990000000">+7 999 000-00-00</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/hero-barbershop.png"
+          alt="Современный барбершоп с креслом, зеркалами и инструментами"
+        />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Барбершоп в центре города</p>
+          <h1 id="hero-title">Стрижка, после которой хочется задержаться у зеркала</h1>
+          <p class="hero-copy">
+            Четкая форма, аккуратная борода и спокойный сервис без суеты. Подберем образ,
+            который выглядит уверенно каждый день.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#booking">Записаться</a>
+            <a class="button button-ghost" href="#services">Смотреть услуги</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="Преимущества">
+        <div class="metric">
+          <strong>45 мин</strong>
+          <span>средняя мужская стрижка</span>
+        </div>
+        <div class="metric">
+          <strong>4.9</strong>
+          <span>рейтинг гостей</span>
+        </div>
+        <div class="metric">
+          <strong>7 дней</strong>
+          <span>работаем без выходных</span>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="section-heading">
+          <p class="eyebrow">Услуги</p>
+          <h2>Все, что нужно для аккуратного образа</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-price">от 1 500 ₽</span>
+            <h3>Мужская стрижка</h3>
+            <p>Консультация, мытье, стрижка машинкой и ножницами, укладка.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-price">от 1 100 ₽</span>
+            <h3>Борода и бритье</h3>
+            <p>Форма бороды, контур опасной бритвой, уходовое масло и горячее полотенце.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-price">от 2 300 ₽</span>
+            <h3>Комплекс</h3>
+            <p>Стрижка, борода и финальная укладка для полной перезагрузки образа.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section" id="masters">
+        <div>
+          <p class="eyebrow">Команда</p>
+          <h2>Мастера, которые слушают до первого движения машинкой</h2>
+        </div>
+        <div class="feature-list">
+          <div>
+            <h3>Подбор формы</h3>
+            <p>Учитываем рост волос, форму лица, привычную укладку и ваш ритм жизни.</p>
+          </div>
+          <div>
+            <h3>Чистые инструменты</h3>
+            <p>Стерилизация после каждого гостя и одноразовые расходники там, где это важно.</p>
+          </div>
+          <div>
+            <h3>Понятная запись</h3>
+            <p>Выберите услугу, время и мастера. Подтверждение приходит сразу после заявки.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-section" id="booking">
+        <div class="booking-copy">
+          <p class="eyebrow">Запись</p>
+          <h2>Забронируйте удобное время</h2>
+          <p>
+            Оставьте контакты, и администратор подтвердит запись. Для учебного проекта форма
+            оформлена как демонстрационная.
+          </p>
+        </div>
+        <form class="booking-form">
+          <label>
+            Имя
+            <input type="text" name="name" placeholder="Алексей" />
+          </label>
+          <label>
+            Телефон
+            <input type="tel" name="phone" placeholder="+7 999 000-00-00" />
+          </label>
+          <label>
+            Услуга
+            <select name="service">
+              <option>Мужская стрижка</option>
+              <option>Борода и бритье</option>
+              <option>Комплекс</option>
+            </select>
+          </label>
+          <button class="button button-primary" type="button">Отправить заявку</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Blade &amp; Co</span>
+      <span>Ежедневно 10:00-22:00</span>
+      <span>Москва, ул. Примерная, 12</span>
+    </footer>
+  </body>
+</html>
