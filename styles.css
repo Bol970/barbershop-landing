@@ -47,7 +47,8 @@ a {
 
 .brand,
 .main-nav,
-.header-action {
+.header-action,
+.mobile-action {
   display: flex;
   align-items: center;
 }
@@ -79,6 +80,10 @@ a {
   padding: 0 16px;
   border: 1px solid rgba(255, 255, 255, 0.42);
   font-weight: 700;
+}
+
+.mobile-action {
+  display: none;
 }
 
 .hero {
@@ -177,6 +182,11 @@ h3 {
   border: 1px solid transparent;
   font-weight: 800;
   cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
 }
 
 .button-primary {
@@ -188,6 +198,53 @@ h3 {
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.36);
   background: rgba(255, 255, 255, 0.08);
+}
+
+.button:hover,
+.button:focus-visible,
+.header-action:hover,
+.header-action:focus-visible,
+.mobile-action:hover,
+.mobile-action:focus-visible,
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  outline: none;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: translateY(-2px);
+}
+
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: #9e5832;
+}
+
+.button-ghost:hover,
+.button-ghost:focus-visible,
+.header-action:hover,
+.header-action:focus-visible {
+  border-color: rgba(255, 255, 255, 0.74);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.main-nav a {
+  transition: color 160ms ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+  color: var(--white);
+}
+
+.button:focus-visible,
+.header-action:focus-visible,
+.mobile-action:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  box-shadow: 0 0 0 3px rgba(181, 107, 63, 0.34);
 }
 
 .intro-band {
@@ -309,6 +366,40 @@ h3 {
   color: var(--moss);
 }
 
+.location-section {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
+  gap: clamp(28px, 7vw, 86px);
+  padding: clamp(54px, 8vw, 92px) clamp(18px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.location-details {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+}
+
+.location-details > div {
+  display: grid;
+  gap: 8px;
+  padding: 22px 24px;
+  background: var(--panel);
+}
+
+.location-details span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.location-details strong {
+  font-size: 1.12rem;
+}
+
 .booking-section {
   display: grid;
   grid-template-columns: minmax(260px, 0.9fr) minmax(320px, 1.1fr);
@@ -334,7 +425,8 @@ label {
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   min-height: 48px;
   border: 1px solid var(--line);
@@ -343,6 +435,25 @@ select {
   color: var(--ink);
   background: var(--white);
   font: inherit;
+}
+
+textarea {
+  min-height: 110px;
+  padding-top: 12px;
+  resize: vertical;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  border-color: var(--copper);
+  outline: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
 }
 
 .form-note {
@@ -386,6 +497,16 @@ select {
     font-size: 0.88rem;
   }
 
+  .mobile-action {
+    display: inline-flex;
+    min-height: 38px;
+    padding: 0 14px;
+    color: var(--white);
+    background: var(--copper);
+    font-size: 0.88rem;
+    font-weight: 800;
+  }
+
   .hero {
     min-height: 88vh;
   }
@@ -402,6 +523,7 @@ select {
   .intro-band,
   .service-grid,
   .review-grid,
+  .location-section,
   .split-section,
   .booking-section {
     grid-template-columns: 1fr;
@@ -429,5 +551,9 @@ select {
   .hero-actions .button,
   .booking-form .button {
     width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
   }
 }
