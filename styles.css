@@ -1234,16 +1234,9 @@ textarea:focus-visible {
 
   .floating-cta { display: inline-flex; }
 
-  .mobile-action {
-    display: inline-flex;
-    min-height: 38px;
-    padding: 0 14px;
-    color: var(--on-dark-strong);
-    background: var(--accent);
-    border-radius: 999px;
-    font-size: 0.85rem;
-    font-weight: 800;
-  }
+  /* .mobile-action stays hidden on mobile —
+     the .floating-cta at bottom-right already covers quick booking access,
+     and removing it cleans up the cramped header (brand + theme-switch). */
 }
 
 @media (max-width: 520px) {
