@@ -1173,16 +1173,21 @@ textarea:focus-visible {
   .theme-btn-label { display: none; }
   .theme-btn { padding: 7px 9px; }
 
-  .header-action { padding: 0 12px; font-size: 0.85rem; }
+  .site-header { padding: 12px 16px; gap: 10px; }
+  .header-tools { gap: 8px; }
+  .header-action { padding: 0 12px; font-size: 0.85rem; white-space: nowrap; }
 
-  .hero { min-height: 88vh; }
+  .hero { min-height: auto; }
   .hero-shade {
-    background: linear-gradient(180deg, var(--hero-shade-1), var(--hero-shade-2));
+    background:
+      linear-gradient(180deg, rgba(8, 7, 6, 0.86) 0%, rgba(8, 7, 6, 0.50) 30%, rgba(8, 7, 6, 0.35) 60%, rgba(8, 7, 6, 0.85) 100%);
   }
   .hero-content {
     margin: 0 auto;
-    padding: 132px 24px 100px;
+    padding: 96px 22px 64px;
   }
+  h1 { font-size: clamp(2.1rem, 8.4vw, 3rem); }
+  .hero-copy { margin-bottom: 22px; }
 
   .service-grid,
   .review-grid,
@@ -1233,12 +1238,19 @@ textarea:focus-visible {
 @media (max-width: 520px) {
   .brand-name { display: none; }
 
+  /* On tightest mobile, the phone link competes with brand + theme-switch + CTA.
+     Hide phone link — both mobile-action pill and floating-cta already cover calling-to-record. */
+  .header-action { display: none; }
+
   .hero-actions .button,
   .booking-form .button {
     width: 100%;
   }
+  .hero-actions { flex-direction: column; }
 
   .form-row { grid-template-columns: 1fr; }
 
   .intro-band { grid-template-columns: 1fr 1fr; }
+
+  .hero-content { padding: 86px 18px 56px; }
 }
