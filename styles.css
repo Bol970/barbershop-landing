@@ -91,35 +91,111 @@
   --gallery-art-to: #6b3f10;
 }
 
-/* ---------- NEON THEME ---------- */
+/* ---------- NEON THEME (toxic / acid) ---------- */
 :root[data-theme="neon"] {
-  --bg: #0a0a0f;
-  --surface: #15151d;
-  --surface-alt: #1d1d28;
-  --text: #f2f2f7;
-  --text-dim: #a4a4b8;
-  --border: #2a2a36;
-  --accent: #00e8c4;
-  --accent-deep: #00b39a;
-  --accent-soft: rgba(0, 232, 196, 0.12);
-  --dark: #0a0a0f;
-  --dark-deep: #050507;
-  --on-dark: rgba(255, 255, 255, 0.78);
+  --bg: #050510;
+  --surface: #0d0d1c;
+  --surface-alt: #14142a;
+  --text: #ecffd1;
+  --text-dim: #9d9fb8;
+  --border: #2a2148;
+  --accent: #c8ff00;             /* acid lime — "poisonous" */
+  --accent-deep: #a4d600;
+  --accent-soft: rgba(200, 255, 0, 0.14);
+  --accent-glow: rgba(200, 255, 0, 0.55);
+  --accent-alt: #ff2bd6;          /* hot magenta — secondary neon */
+  --accent-alt-glow: rgba(255, 43, 214, 0.55);
+  --dark: #050510;
+  --dark-deep: #02020a;
+  --on-dark: rgba(236, 255, 209, 0.82);
   --on-dark-strong: #ffffff;
 
-  --hero-shade-1: rgba(5, 5, 10, 0.94);
-  --hero-shade-2: rgba(5, 5, 10, 0.70);
-  --hero-shade-3: rgba(5, 5, 10, 0.20);
-  --hero-image-filter: hue-rotate(-12deg) saturate(1.1) brightness(0.85);
+  --hero-shade-1: rgba(2, 2, 12, 0.94);
+  --hero-shade-2: rgba(2, 2, 12, 0.70);
+  --hero-shade-3: rgba(40, 0, 60, 0.30);
+  --hero-image-filter: hue-rotate(-20deg) saturate(1.25) contrast(1.05) brightness(0.78);
 
-  --shadow-sm: 0 6px 22px -10px rgba(0, 232, 196, 0.32);
-  --shadow-md: 0 24px 60px -28px rgba(0, 232, 196, 0.45);
-  --ring: 0 0 0 3px rgba(0, 232, 196, 0.34);
+  --shadow-sm:
+    0 0 0 1px rgba(200, 255, 0, 0.32),
+    0 8px 24px -8px rgba(200, 255, 0, 0.50);
+  --shadow-md:
+    0 0 0 1px rgba(200, 255, 0, 0.28),
+    0 24px 60px -24px rgba(200, 255, 0, 0.55);
+  --ring: 0 0 0 3px rgba(200, 255, 0, 0.45);
 
-  --gallery-art-from: #00e8c4;
-  --gallery-art-to: #6a00ff;
+  --gallery-art-from: #c8ff00;
+  --gallery-art-to: #ff2bd6;
 
   color-scheme: dark;
+}
+
+/* Neon-only flourishes: glow on primary CTAs, magenta on hovers */
+:root[data-theme="neon"] .button-primary {
+  color: #0a0a18;              /* black-ink on acid lime, max contrast */
+  text-shadow: none;
+  box-shadow:
+    0 0 0 1px rgba(200, 255, 0, 0.6),
+    0 0 18px rgba(200, 255, 0, 0.55),
+    0 8px 28px -10px rgba(200, 255, 0, 0.7);
+}
+:root[data-theme="neon"] .button-primary:hover,
+:root[data-theme="neon"] .button-primary:focus-visible {
+  background: var(--accent);
+  box-shadow:
+    0 0 0 1px rgba(200, 255, 0, 0.9),
+    0 0 28px rgba(200, 255, 0, 0.85),
+    0 12px 36px -10px rgba(200, 255, 0, 0.9);
+  transform: translateY(-2px);
+}
+
+:root[data-theme="neon"] .floating-cta {
+  color: #0a0a18;
+  box-shadow:
+    0 0 0 1px rgba(200, 255, 0, 0.6),
+    0 0 22px rgba(200, 255, 0, 0.7);
+}
+
+:root[data-theme="neon"] .theme-btn.is-active {
+  color: #0a0a18;
+  box-shadow:
+    0 0 0 1px rgba(200, 255, 0, 0.5),
+    0 0 12px rgba(200, 255, 0, 0.6);
+}
+
+:root[data-theme="neon"] .eyebrow-dot {
+  box-shadow: 0 0 0 4px var(--accent-soft), 0 0 12px var(--accent-glow);
+}
+
+:root[data-theme="neon"] .accent-text {
+  color: var(--accent);
+  text-shadow: 0 0 16px var(--accent-glow);
+}
+
+:root[data-theme="neon"] .service-badge,
+:root[data-theme="neon"] .service-card--featured {
+  border-color: var(--accent-alt);
+}
+:root[data-theme="neon"] .service-badge {
+  background: var(--accent-alt);
+  color: #ffffff;
+  box-shadow: 0 0 12px var(--accent-alt-glow);
+}
+
+:root[data-theme="neon"] .service-card:hover {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px rgba(200, 255, 0, 0.32),
+    0 18px 50px -22px rgba(200, 255, 0, 0.40);
+}
+
+:root[data-theme="neon"] .review-stars {
+  color: var(--accent-alt);
+  text-shadow: 0 0 8px var(--accent-alt-glow);
+}
+
+:root[data-theme="neon"] .hero-pills li {
+  border-color: rgba(200, 255, 0, 0.36);
+  background: rgba(200, 255, 0, 0.06);
 }
 
 /* ============================================================
