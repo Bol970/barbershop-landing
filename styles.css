@@ -62,33 +62,33 @@
   color-scheme: light;
 }
 
-/* ---------- LIGHT THEME ---------- */
+/* ---------- LIGHT THEME (warm sunlight) ---------- */
 :root[data-theme="light"] {
-  --bg: #ffffff;
+  --bg: #fdf7ea;            /* warm cream — like morning sunlight on a wall */
   --surface: #ffffff;
-  --surface-alt: #f3f4f7;
-  --text: #0f1115;
-  --text-dim: #5e6573;
-  --border: #e3e5ec;
-  --accent: #2f63ff;
-  --accent-deep: #1e49d6;
-  --accent-soft: rgba(47, 99, 255, 0.10);
-  --dark: #0f1115;
-  --dark-deep: #06070a;
-  --on-dark: rgba(255, 255, 255, 0.82);
-  --on-dark-strong: #ffffff;
+  --surface-alt: #f6ecd6;   /* honey-tinted off-white */
+  --text: #2a1f10;          /* warm near-black, slight brown */
+  --text-dim: #7a6a52;
+  --border: #ecdcb8;        /* soft amber */
+  --accent: #e8a52a;        /* golden amber — sun glow */
+  --accent-deep: #c2841a;
+  --accent-soft: rgba(232, 165, 42, 0.16);
+  --dark: #2a1f10;          /* warm dark for footer / split section */
+  --dark-deep: #1a130a;
+  --on-dark: rgba(255, 244, 224, 0.84);
+  --on-dark-strong: #fff8e8;
 
-  --hero-shade-1: rgba(10, 12, 18, 0.55);
-  --hero-shade-2: rgba(10, 12, 18, 0.30);
-  --hero-shade-3: rgba(10, 12, 18, 0.08);
-  --hero-image-filter: saturate(0.92) brightness(1.05);
+  --hero-shade-1: rgba(28, 18, 8, 0.78);
+  --hero-shade-2: rgba(28, 18, 8, 0.46);
+  --hero-shade-3: rgba(28, 18, 8, 0.12);
+  --hero-image-filter: saturate(1.05) brightness(1.05) hue-rotate(-4deg);
 
-  --shadow-sm: 0 6px 20px -12px rgba(15, 17, 21, 0.28);
-  --shadow-md: 0 24px 60px -30px rgba(15, 17, 21, 0.40);
-  --ring: 0 0 0 3px rgba(47, 99, 255, 0.28);
+  --shadow-sm: 0 6px 22px -12px rgba(140, 90, 20, 0.30);
+  --shadow-md: 0 24px 60px -28px rgba(140, 90, 20, 0.36);
+  --ring: 0 0 0 3px rgba(232, 165, 42, 0.34);
 
-  --gallery-art-from: #2f63ff;
-  --gallery-art-to: #0f1115;
+  --gallery-art-from: #e8a52a;
+  --gallery-art-to: #6b3f10;
 }
 
 /* ---------- NEON THEME ---------- */
