@@ -1,43 +1,156 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-theme="classic">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blade & Co | Барбершоп в центре города</title>
+    <meta name="theme-color" content="#181513" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="author" content="Blade & Co" />
+    <meta name="keywords" content="барбершоп Москва, мужская стрижка, оформление бороды, бритье опасной бритвой, барбер, запись онлайн, Blade and Co" />
+
+    <title>Blade & Co — барбершоп в центре Москвы | Стрижка, борода, бритье</title>
     <meta
       name="description"
-      content="Лендинг современного барбершопа Blade & Co: стрижки, оформление бороды, уход и запись онлайн."
+      content="Барбершоп Blade & Co в центре Москвы: мужская стрижка от 1 500 ₽, оформление бороды, опасная бритва и уход. Работаем ежедневно 10:00–22:00. Онлайн-запись за минуту."
     />
-    <meta property="og:title" content="Blade & Co | Барбершоп в центре города" />
+    <link rel="canonical" href="https://bol970.github.io/barbershop-landing/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Blade & Co" />
+    <meta property="og:title" content="Blade & Co — барбершоп в центре Москвы" />
     <meta
       property="og:description"
-      content="Стрижки, оформление бороды и спокойный сервис без суеты. Запишитесь в Blade & Co."
+      content="Стрижка, оформление бороды и опасная бритва. Спокойный сервис без суеты в центре Москвы. Запишитесь онлайн."
     />
-    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://bol970.github.io/barbershop-landing/" />
     <meta property="og:image" content="https://bol970.github.io/barbershop-landing/assets/hero-barbershop.png" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="788" />
+    <meta property="og:image:alt" content="Интерьер барбершопа Blade & Co — кресло и зеркало" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Blade & Co — барбершоп в центре Москвы" />
+    <meta
+      name="twitter:description"
+      content="Стрижка, борода, опасная бритва. Онлайн-запись за минуту."
+    />
+    <meta name="twitter:image" content="https://bol970.github.io/barbershop-landing/assets/hero-barbershop.png" />
+
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="assets/hero-barbershop.webp" type="image/webp" fetchpriority="high" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Blade & Co",
+        "image": "https://bol970.github.io/barbershop-landing/assets/hero-barbershop.png",
+        "url": "https://bol970.github.io/barbershop-landing/",
+        "telephone": "+7-999-000-00-00",
+        "priceRange": "₽₽",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Примерная, 12",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 55.7558,
+          "longitude": 37.6173
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday", "Tuesday", "Wednesday", "Thursday",
+              "Friday", "Saturday", "Sunday"
+            ],
+            "opens": "10:00",
+            "closes": "22:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "184"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Услуги барбершопа",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Мужская стрижка" },
+              "price": "1500",
+              "priceCurrency": "RUB"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Оформление бороды" },
+              "price": "1100",
+              "priceCurrency": "RUB"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": { "@type": "Service", "name": "Комплекс: стрижка + борода" },
+              "price": "2300",
+              "priceCurrency": "RUB"
+            }
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Blade and Co">
-        <span class="brand-mark">B</span>
-        <span>Blade &amp; Co</span>
+    <a class="skip-link" href="#hero-title">Перейти к контенту</a>
+
+    <header class="site-header" role="banner">
+      <a class="brand" href="#top" aria-label="Blade and Co — главная">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3v9a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V3" />
+            <path d="M9 21h6" />
+            <path d="M12 15v6" />
+          </svg>
+        </span>
+        <span class="brand-name">Blade<span class="brand-amp">&amp;</span>Co</span>
       </a>
+
       <nav class="main-nav" aria-label="Основная навигация">
         <a href="#services">Услуги</a>
         <a href="#masters">Мастера</a>
+        <a href="#gallery">Галерея</a>
         <a href="#reviews">Отзывы</a>
+        <a href="#faq">FAQ</a>
         <a href="#booking">Запись</a>
       </nav>
-      <a class="header-action" href="tel:+79990000000">+7 999 000-00-00</a>
-      <a class="mobile-action" href="#booking">Запись</a>
+
+      <div class="header-tools">
+        <div class="theme-switch" role="group" aria-label="Переключение темы оформления">
+          <button type="button" data-theme-btn="classic" class="theme-btn is-active" aria-pressed="true" title="Тёмная медно-угольная тема">
+            <span aria-hidden="true">●</span><span class="theme-btn-label">Классика</span>
+          </button>
+          <button type="button" data-theme-btn="light" class="theme-btn" aria-pressed="false" title="Светлая минималистичная тема">
+            <span aria-hidden="true">○</span><span class="theme-btn-label">Свет</span>
+          </button>
+          <button type="button" data-theme-btn="neon" class="theme-btn" aria-pressed="false" title="Яркая неоновая тема">
+            <span aria-hidden="true">✦</span><span class="theme-btn-label">Неон</span>
+          </button>
+        </div>
+        <a class="header-action" href="tel:+79990000000">+7 999 000-00-00</a>
+        <a class="mobile-action" href="#booking">Запись</a>
+      </div>
     </header>
 
     <main id="top">
@@ -47,110 +160,312 @@
           <img
             class="hero-image"
             src="assets/hero-barbershop.png"
-            alt="Современный барбершоп с креслом, зеркалами и инструментами"
+            alt="Интерьер современного барбершопа Blade & Co с винтажным креслом, зеркалами и инструментами мастера"
+            width="1400"
+            height="788"
+            fetchpriority="high"
           />
         </picture>
-        <div class="hero-shade"></div>
+        <div class="hero-shade" aria-hidden="true"></div>
+
         <div class="hero-content">
-          <p class="eyebrow">Барбершоп в центре города</p>
-          <h1 id="hero-title">Стрижка, после которой хочется задержаться у зеркала</h1>
+          <p class="eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            Барбершоп в центре Москвы
+          </p>
+          <h1 id="hero-title">
+            Стрижка, после которой <span class="accent-text">хочется задержаться</span> у зеркала
+          </h1>
           <p class="hero-copy">
             Четкая форма, аккуратная борода и спокойный сервис без суеты. Подберем образ,
             который выглядит уверенно каждый день.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#booking">Записаться</a>
+            <a class="button button-primary" href="#booking">
+              Записаться
+              <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14" /><path d="M13 6l6 6-6 6" />
+              </svg>
+            </a>
             <a class="button button-ghost" href="#services">Смотреть услуги</a>
           </div>
+          <ul class="hero-pills" aria-label="Ключевые преимущества">
+            <li>★ 4.9 рейтинг гостей</li>
+            <li>● Без выходных 10:00–22:00</li>
+            <li>▲ 5 мин от метро</li>
+          </ul>
         </div>
       </section>
 
-      <section class="intro-band" aria-label="Преимущества">
+      <section class="intro-band" aria-label="Преимущества в цифрах">
         <div class="metric">
-          <strong>45 мин</strong>
+          <strong>45<span class="metric-unit">мин</span></strong>
           <span>средняя мужская стрижка</span>
         </div>
         <div class="metric">
-          <strong>4.9</strong>
-          <span>рейтинг гостей</span>
+          <strong>4.9<span class="metric-unit">/5</span></strong>
+          <span>рейтинг гостей по 184 отзывам</span>
         </div>
         <div class="metric">
-          <strong>7 дней</strong>
+          <strong>7<span class="metric-unit">дней</span></strong>
           <span>работаем без выходных</span>
+        </div>
+        <div class="metric">
+          <strong>6<span class="metric-unit">лет</span></strong>
+          <span>команде барберов</span>
         </div>
       </section>
 
-      <section class="section" id="services">
+      <section class="section" id="services" aria-labelledby="services-title">
         <div class="section-heading">
-          <p class="eyebrow">Услуги</p>
-          <h2>Все, что нужно для аккуратного образа</h2>
+          <div>
+            <p class="eyebrow">Услуги</p>
+            <h2 id="services-title">Все, что нужно для аккуратного образа</h2>
+          </div>
+          <p class="section-lead">
+            Цена включает мытьё, консультацию и финальную укладку. Без скрытых доплат — итоговая сумма обсуждается до начала работы.
+          </p>
         </div>
         <div class="service-grid">
           <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 11l8 8" />
+                <circle cx="7" cy="9" r="3" />
+                <circle cx="7" cy="39" r="3" />
+                <path d="M9 37l30-30" />
+                <path d="M9 11l30 30" />
+              </svg>
+            </div>
             <span class="service-price">от 1 500 ₽</span>
             <h3>Мужская стрижка</h3>
             <p>Консультация, мытье, стрижка машинкой и ножницами, укладка.</p>
+            <ul class="service-bullets">
+              <li>Подбор формы под тип лица</li>
+              <li>Укладка финишным средством</li>
+              <li>~ 45 минут</li>
+            </ul>
           </article>
-          <article class="service-card">
+
+          <article class="service-card service-card--featured">
+            <span class="service-badge">Хит</span>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 8c0 8 4 14 10 14s10-6 10-14" />
+                <path d="M14 8c2-2 6-3 10-3s8 1 10 3" />
+                <path d="M18 24c0 6 3 12 6 16 3-4 6-10 6-16" />
+              </svg>
+            </div>
             <span class="service-price">от 1 100 ₽</span>
-            <h3>Борода и бритье</h3>
+            <h3>Борода и бритьё</h3>
             <p>Форма бороды, контур опасной бритвой, уходовое масло и горячее полотенце.</p>
+            <ul class="service-bullets">
+              <li>Опасная бритва</li>
+              <li>Горячее полотенце + масло</li>
+              <li>~ 40 минут</li>
+            </ul>
           </article>
+
           <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="24" cy="24" r="18" />
+                <path d="M12 24h24" /><path d="M24 12v24" />
+              </svg>
+            </div>
             <span class="service-price">от 2 300 ₽</span>
             <h3>Комплекс</h3>
             <p>Стрижка, борода и финальная укладка для полной перезагрузки образа.</p>
+            <ul class="service-bullets">
+              <li>Стрижка + борода</li>
+              <li>Кофе или чай в подарок</li>
+              <li>~ 75 минут</li>
+            </ul>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 16l8-8 8 8-8 8z" />
+                <path d="M20 24l-8 8 8 8 8-8" />
+                <path d="M28 16h8v8" />
+              </svg>
+            </div>
+            <span class="service-price">от 900 ₽</span>
+            <h3>Детская стрижка</h3>
+            <p>Стрижка для гостей до 12 лет — спокойный мастер, мультики на экране.</p>
+            <ul class="service-bullets">
+              <li>Без громких машинок</li>
+              <li>Подарок в финале</li>
+              <li>~ 30 минут</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section class="split-section" id="masters">
-        <div>
+      <section class="split-section" id="masters" aria-labelledby="masters-title">
+        <div class="split-copy">
           <p class="eyebrow">Команда</p>
-          <h2>Мастера, которые слушают до первого движения машинкой</h2>
+          <h2 id="masters-title">Мастера, которые слушают до первого движения машинкой</h2>
+          <p class="section-lead section-lead--dim">
+            Каждый барбер — минимум 4 года практики и регулярные мастер-классы. Перед стрижкой обсудим длину, форму и привычную укладку.
+          </p>
         </div>
-        <div class="feature-list">
-          <div>
-            <h3>Подбор формы</h3>
-            <p>Учитываем рост волос, форму лица, привычную укладку и ваш ритм жизни.</p>
-          </div>
-          <div>
-            <h3>Чистые инструменты</h3>
-            <p>Стерилизация после каждого гостя и одноразовые расходники там, где это важно.</p>
-          </div>
-          <div>
-            <h3>Понятная запись</h3>
-            <p>Выберите услугу, время и мастера. Подтверждение приходит сразу после заявки.</p>
-          </div>
+        <div class="masters-grid">
+          <article class="master-card">
+            <div class="master-avatar" data-initials="МК" style="--avatar-from:#b56b3f;--avatar-to:#5a3320" aria-hidden="true">МК</div>
+            <h3>Михаил К.</h3>
+            <p class="master-role">Шеф-барбер · 8 лет</p>
+            <p>Классические формы, точные контуры, плотная фактура. Идёт к гостям, которые ценят сдержанность.</p>
+          </article>
+          <article class="master-card">
+            <div class="master-avatar" data-initials="АД" style="--avatar-from:#425242;--avatar-to:#1f2a1f" aria-hidden="true">АД</div>
+            <h3>Антон Д.</h3>
+            <p class="master-role">Барбер · 6 лет</p>
+            <p>Современные тейперы, фейды, текстурная укладка. Поможет освежить образ без радикальных изменений.</p>
+          </article>
+          <article class="master-card">
+            <div class="master-avatar" data-initials="ЕС" style="--avatar-from:#22201d;--avatar-to:#0a0a09" aria-hidden="true">ЕС</div>
+            <h3>Егор С.</h3>
+            <p class="master-role">Барбер-бородач · 5 лет</p>
+            <p>Опасная бритва, оформление и плотный уход за бородой. Подберёт форму под скулы и длину.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section reviews-section" id="reviews">
+      <section class="section gallery-section" id="gallery" aria-labelledby="gallery-title">
         <div class="section-heading">
-          <p class="eyebrow">Отзывы</p>
-          <h2>Гости возвращаются не только за стрижкой</h2>
+          <div>
+            <p class="eyebrow">Галерея</p>
+            <h2 id="gallery-title">Атмосфера и работы команды</h2>
+          </div>
+          <p class="section-lead">
+            Кресло у окна, тёплый свет и инструменты под рукой. Несколько кадров из обычного рабочего дня.
+          </p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card gallery-card--wide">
+            <picture>
+              <source srcset="assets/hero-barbershop.webp" type="image/webp" />
+              <img src="assets/hero-barbershop.png" alt="Кресло барбера у окна с тёплым вечерним светом" loading="lazy" />
+            </picture>
+            <figcaption>Главный зал · кресло у окна</figcaption>
+          </figure>
+          <figure class="gallery-card gallery-card--art">
+            <div class="art-tile art-tile--scissors" aria-hidden="true">
+              <svg viewBox="0 0 200 200" width="100%" height="100%">
+                <defs>
+                  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="var(--gallery-art-from)" />
+                    <stop offset="1" stop-color="var(--gallery-art-to)" />
+                  </linearGradient>
+                </defs>
+                <rect width="200" height="200" fill="url(#g1)" />
+                <g fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2.4" stroke-linecap="round">
+                  <circle cx="70" cy="130" r="22" />
+                  <circle cx="130" cy="130" r="22" />
+                  <path d="M70 130 L160 50" />
+                  <path d="M130 130 L40 50" />
+                </g>
+              </svg>
+            </div>
+            <figcaption>Инструмент мастера</figcaption>
+          </figure>
+          <figure class="gallery-card gallery-card--art">
+            <div class="art-tile art-tile--comb" aria-hidden="true">
+              <svg viewBox="0 0 200 200" width="100%" height="100%">
+                <rect width="200" height="200" fill="var(--gallery-art-from)" />
+                <g stroke="rgba(255,255,255,0.85)" stroke-width="3" stroke-linecap="round">
+                  <path d="M30 80 L170 80 L170 110 L30 110 Z" fill="none" />
+                  <path d="M50 110 L50 150" />
+                  <path d="M70 110 L70 160" />
+                  <path d="M90 110 L90 165" />
+                  <path d="M110 110 L110 165" />
+                  <path d="M130 110 L130 160" />
+                  <path d="M150 110 L150 150" />
+                </g>
+              </svg>
+            </div>
+            <figcaption>Финальная укладка</figcaption>
+          </figure>
+          <figure class="gallery-card gallery-card--art">
+            <div class="art-tile art-tile--razor" aria-hidden="true">
+              <svg viewBox="0 0 200 200" width="100%" height="100%">
+                <rect width="200" height="200" fill="var(--gallery-art-to)" />
+                <g fill="none" stroke="rgba(255,255,255,0.85)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M40 60 L160 60 L150 90 L50 90 Z" />
+                  <path d="M50 90 L150 90 L140 110 L60 110 Z" fill="rgba(255,255,255,0.18)" />
+                  <path d="M160 60 L175 50" />
+                </g>
+              </svg>
+            </div>
+            <figcaption>Опасная бритва</figcaption>
+          </figure>
+          <figure class="gallery-card gallery-card--art gallery-card--wide-2">
+            <div class="art-tile art-tile--pattern" aria-hidden="true">
+              <svg viewBox="0 0 400 200" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="var(--gallery-art-from)" />
+                    <stop offset="1" stop-color="var(--gallery-art-to)" />
+                  </linearGradient>
+                  <pattern id="p1" patternUnits="userSpaceOnUse" width="24" height="24" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="24" stroke="rgba(255,255,255,0.18)" stroke-width="2" />
+                  </pattern>
+                </defs>
+                <rect width="400" height="200" fill="url(#g2)" />
+                <rect width="400" height="200" fill="url(#p1)" />
+                <text x="200" y="115" text-anchor="middle" font-family="Playfair Display, serif" font-size="56" font-weight="700" fill="rgba(255,255,255,0.92)">Blade &amp; Co</text>
+              </svg>
+            </div>
+            <figcaption>Фирменный стиль</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section reviews-section" id="reviews" aria-labelledby="reviews-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Отзывы</p>
+            <h2 id="reviews-title">Гости возвращаются не только за стрижкой</h2>
+          </div>
+          <p class="section-lead">
+            Средняя оценка — 4.9 из 5 по 184 отзывам в Яндексе и 2GIS. Несколько кадров обратной связи ниже.
+          </p>
         </div>
         <div class="review-grid">
           <article class="review-card">
+            <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
             <p>
-              "Объяснил, как укладывать волосы дома, и сделал форму, которая держится уже
-              третью неделю."
+              «Объяснил, как укладывать волосы дома, и сделал форму, которая держится уже
+              третью неделю.»
             </p>
-            <strong>Даниил, стрижка</strong>
+            <div class="review-meta">
+              <span class="review-avatar" aria-hidden="true">Д</span>
+              <span><strong>Даниил</strong><em>стрижка</em></span>
+            </div>
           </article>
           <article class="review-card">
+            <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
             <p>
-              "Записался на комплекс перед собеседованием. Получилось спокойно, быстро и очень
-              аккуратно."
+              «Записался на комплекс перед собеседованием. Получилось спокойно, быстро и очень
+              аккуратно.»
             </p>
-            <strong>Илья, комплекс</strong>
+            <div class="review-meta">
+              <span class="review-avatar" aria-hidden="true">И</span>
+              <span><strong>Илья</strong><em>комплекс</em></span>
+            </div>
           </article>
           <article class="review-card">
+            <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
             <p>
-              "Бороду оформили ровно, без раздражения. Понравилось, что мастер сначала уточнил
-              все детали."
+              «Бороду оформили ровно, без раздражения. Понравилось, что мастер сначала уточнил
+              все детали.»
             </p>
-            <strong>Марат, борода</strong>
+            <div class="review-meta">
+              <span class="review-avatar" aria-hidden="true">М</span>
+              <span><strong>Марат</strong><em>борода</em></span>
+            </div>
           </article>
         </div>
       </section>
@@ -159,6 +474,9 @@
         <div>
           <p class="eyebrow">Где мы</p>
           <h2 id="location-title">В центре, рядом с метро и без лишней суеты</h2>
+          <p class="section-lead section-lead--tight">
+            Парковка во дворе, безналичная оплата, удобный вход с улицы.
+          </p>
         </div>
         <div class="location-details">
           <div>
@@ -167,32 +485,79 @@
           </div>
           <div>
             <span>График</span>
-            <strong>Ежедневно 10:00-22:00</strong>
+            <strong>Ежедневно 10:00–22:00</strong>
           </div>
           <div>
             <span>Ориентир</span>
             <strong>5 минут пешком от метро</strong>
           </div>
+          <div>
+            <span>Оплата</span>
+            <strong>Карта · Наличные · СБП</strong>
+          </div>
         </div>
       </section>
 
-      <section class="booking-section" id="booking">
-        <div class="booking-copy">
-          <p class="eyebrow">Запись</p>
-          <h2>Забронируйте удобное время</h2>
-          <p>
-            Оставьте контакты, и администратор подтвердит запись. Для учебного проекта форма
-            оформлена как демонстрационная.
+      <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-title">Частые вопросы</h2>
+          </div>
+          <p class="section-lead">
+            Если не нашли ответ — напишите в форме записи, администратор ответит в течение 15 минут.
           </p>
         </div>
-        <form class="booking-form" id="booking-form">
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>Нужно ли записываться заранее?</summary>
+            <p>
+              Да, мы работаем по записи — это позволяет мастеру не торопиться. Свободные окна обычно есть на ближайшие 1–2 дня; в выходные лучше бронировать за неделю.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли отменить или перенести запись?</summary>
+            <p>
+              Конечно. Достаточно сообщить не позднее, чем за 3 часа до визита — позвоните или напишите в мессенджер на номер +7 999 000-00-00.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Сколько длится комплексная процедура?</summary>
+            <p>
+              Комплекс «стрижка + борода» занимает 70–80 минут. На первый визит закладывайте дополнительно 5–10 минут на консультацию.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Можно ли с детьми?</summary>
+            <p>
+              Да, у нас отдельная услуга «детская стрижка» для гостей до 12 лет. Стрижка проходит в спокойном темпе, с мультиками на экране.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <section class="booking-section" id="booking" aria-labelledby="booking-title">
+        <div class="booking-copy">
+          <p class="eyebrow">Запись</p>
+          <h2 id="booking-title">Забронируйте удобное время</h2>
+          <p>
+            Оставьте контакты, и администратор подтвердит запись. Для учебного проекта форма
+            оформлена как демонстрационная — ничего никуда не отправляется.
+          </p>
+          <ul class="booking-checklist">
+            <li>Подтверждение по SMS в течение 15 минут</li>
+            <li>Можно выбрать конкретного мастера</li>
+            <li>Подарок при первом визите — стайлинг 50 мл</li>
+          </ul>
+        </div>
+        <form class="booking-form" id="booking-form" novalidate>
           <label>
             Имя
-            <input type="text" name="name" placeholder="Алексей" required />
+            <input type="text" name="name" autocomplete="given-name" placeholder="Алексей" required />
           </label>
           <label>
             Телефон
-            <input type="tel" name="phone" placeholder="+7 999 000-00-00" required />
+            <input type="tel" name="phone" autocomplete="tel" placeholder="+7 999 000-00-00" required />
           </label>
           <label>
             Услуга
@@ -200,6 +565,16 @@
               <option>Мужская стрижка</option>
               <option>Борода и бритье</option>
               <option>Комплекс</option>
+              <option>Детская стрижка</option>
+            </select>
+          </label>
+          <label>
+            Мастер
+            <select name="master">
+              <option>Любой свободный</option>
+              <option>Михаил К. (шеф-барбер)</option>
+              <option>Антон Д.</option>
+              <option>Егор С.</option>
             </select>
           </label>
           <div class="form-row">
@@ -216,7 +591,12 @@
             Комментарий
             <textarea name="comment" rows="4" placeholder="Например: хочу сохранить длину сверху"></textarea>
           </label>
-          <button class="button button-primary" type="submit">Отправить заявку</button>
+          <button class="button button-primary" type="submit">
+            Отправить заявку
+            <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14" /><path d="M13 6l6 6-6 6" />
+            </svg>
+          </button>
           <p class="form-note" id="form-note" role="status">
             Администратор свяжется с вами для подтверждения времени.
           </p>
@@ -224,11 +604,31 @@
       </section>
     </main>
 
-    <footer class="site-footer">
-      <span>Blade &amp; Co</span>
-      <span>Ежедневно 10:00-22:00</span>
-      <span>Москва, ул. Примерная, 12</span>
+    <footer class="site-footer" role="contentinfo">
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark--footer" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3v9a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V3" />
+            <path d="M9 21h6" /><path d="M12 15v6" />
+          </svg>
+        </span>
+        <span>Blade &amp; Co</span>
+      </div>
+      <div class="footer-cols">
+        <span>Ежедневно 10:00–22:00</span>
+        <span>Москва, ул. Примерная, 12</span>
+        <a href="tel:+79990000000">+7 999 000-00-00</a>
+      </div>
+      <p class="footer-note">© 2026 Blade &amp; Co. Учебный лендинг.</p>
     </footer>
+
+    <a class="floating-cta" href="#booking" aria-label="Быстрая запись">
+      <span>Запись</span>
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12h14" /><path d="M13 6l6 6-6 6" />
+      </svg>
+    </a>
+
     <script src="script.js"></script>
   </body>
 </html>
