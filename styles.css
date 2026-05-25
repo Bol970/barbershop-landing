@@ -266,9 +266,13 @@ h3 {
   width: 34px;
   height: 34px;
   border: 1px solid rgba(255, 255, 255, 0.46);
-  background: rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.12);
   color: var(--on-dark-strong);
-  border-radius: 6px;
+  border-radius: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1;
 }
 
 .brand-name { letter-spacing: 0.02em; }
@@ -331,7 +335,7 @@ h3 {
   appearance: none;
   border: 0;
   background: transparent;
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.78);
   font: inherit;
   font-size: 0.78rem;
   font-weight: 700;
@@ -345,11 +349,17 @@ h3 {
   transition: background-color 200ms ease, color 200ms ease;
 }
 
-.theme-btn:hover { color: var(--on-dark-strong); }
+.theme-ico {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.theme-btn:hover { color: var(--on-dark-strong); background: rgba(255, 255, 255, 0.08); }
 
 .theme-btn.is-active {
   background: var(--accent);
   color: var(--on-dark-strong);
+  box-shadow: 0 4px 12px -4px rgba(0, 0, 0, 0.32);
 }
 
 .theme-btn-label { display: inline; }
@@ -1100,6 +1110,7 @@ textarea:focus-visible {
   width: 28px;
   height: 28px;
   border-color: rgba(255, 255, 255, 0.22);
+  font-size: 0.92rem;
 }
 
 .footer-cols {
@@ -1236,11 +1247,18 @@ textarea:focus-visible {
 }
 
 @media (max-width: 520px) {
-  .brand-name { display: none; }
+  /* Hide brand-amp (& symbol) only — keep readable "BladeCo" text on mobile.
+     The mark + brand-name pair makes the brand identifiable. */
+  .brand { gap: 8px; font-size: 0.95rem; }
+  .brand-amp { display: none; }
+  .brand-name { letter-spacing: 0; }
 
   /* On tightest mobile, the phone link competes with brand + theme-switch + CTA.
      Hide phone link — both mobile-action pill and floating-cta already cover calling-to-record. */
   .header-action { display: none; }
+
+  /* Theme switcher: just SVG icons, no labels, slightly tighter. */
+  .theme-btn { padding: 6px 8px; }
 
   .hero-actions .button,
   .booking-form .button {
@@ -1253,4 +1271,10 @@ textarea:focus-visible {
   .intro-band { grid-template-columns: 1fr 1fr; }
 
   .hero-content { padding: 86px 18px 56px; }
+}
+
+@media (max-width: 380px) {
+  /* On very narrow viewports (e.g., 360px), brand-name is the first to go
+     so theme-switch and Запись pill keep breathing room. */
+  .brand-name { display: none; }
 }

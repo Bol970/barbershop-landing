@@ -117,13 +117,7 @@
 
     <header class="site-header" role="banner">
       <a class="brand" href="#top" aria-label="Blade and Co — главная">
-        <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 3v9a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V3" />
-            <path d="M9 21h6" />
-            <path d="M12 15v6" />
-          </svg>
-        </span>
+        <span class="brand-mark" aria-hidden="true">B</span>
         <span class="brand-name">Blade<span class="brand-amp">&amp;</span>Co</span>
       </a>
 
@@ -139,13 +133,28 @@
       <div class="header-tools">
         <div class="theme-switch" role="group" aria-label="Переключение темы оформления">
           <button type="button" data-theme-btn="classic" class="theme-btn is-active" aria-pressed="true" title="Тёмная медно-угольная тема">
-            <span aria-hidden="true">●</span><span class="theme-btn-label">Классика</span>
+            <svg class="theme-ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+              <path fill="currentColor" d="M11.5 9.3a5 5 0 1 1-4.8-6.8 4 4 0 0 0 4.8 6.8z"/>
+            </svg>
+            <span class="theme-btn-label">Классика</span>
           </button>
           <button type="button" data-theme-btn="light" class="theme-btn" aria-pressed="false" title="Светлая минималистичная тема">
-            <span aria-hidden="true">○</span><span class="theme-btn-label">Свет</span>
+            <svg class="theme-ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+              <circle cx="8" cy="8" r="3" fill="currentColor"/>
+              <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M8 1v2"/><path d="M8 13v2"/>
+                <path d="M1 8h2"/><path d="M13 8h2"/>
+                <path d="M3 3l1.4 1.4"/><path d="M11.6 11.6L13 13"/>
+                <path d="M3 13l1.4-1.4"/><path d="M11.6 4.4L13 3"/>
+              </g>
+            </svg>
+            <span class="theme-btn-label">Свет</span>
           </button>
           <button type="button" data-theme-btn="neon" class="theme-btn" aria-pressed="false" title="Яркая неоновая тема">
-            <span aria-hidden="true">✦</span><span class="theme-btn-label">Неон</span>
+            <svg class="theme-ico" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+              <path fill="currentColor" d="M9 1L3 9h4l-1 6 6-8H8z"/>
+            </svg>
+            <span class="theme-btn-label">Неон</span>
           </button>
         </div>
         <a class="header-action" href="tel:+79990000000">+7 999 000-00-00</a>
@@ -606,12 +615,7 @@
 
     <footer class="site-footer" role="contentinfo">
       <div class="footer-brand">
-        <span class="brand-mark brand-mark--footer" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 3v9a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V3" />
-            <path d="M9 21h6" /><path d="M12 15v6" />
-          </svg>
-        </span>
+        <span class="brand-mark brand-mark--footer" aria-hidden="true">B</span>
         <span>Blade &amp; Co</span>
       </div>
       <div class="footer-cols">
